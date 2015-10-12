@@ -13,6 +13,6 @@ for x in g:
     if count == 110:
         count = 1
         countgroup = countgroup + 1
-#    print "set address Untrust AddressName%s %s %s" % (address, address, mask)
-#    print "set group address Untrust GroupAddressName%s add AddressName%s" % (countgroup, address)
+    print "set address Untrust AddressName%s %s %s" % (address, address, mask)
+    print "set group address Untrust GroupAddressName%s add AddressName%s" % (countgroup, address)
     print "unset route %s %s gateway 1.2.3.4" % (address, mask)
