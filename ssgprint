@@ -1,0 +1,18 @@
+#!/usr/bin/python2
+f = open('ipaddress')
+g = f.readlines()
+
+count = 0
+countgroup = 0
+for x in g:
+    g = x.rstrip()
+    a = g.split(" ")
+    address = a[0]
+    mask = a[1]
+    count = count + 1
+    if count == 110:
+        count = 1
+        countgroup = countgroup + 1
+#    print "set address Untrust AddressName%s %s %s" % (address, address, mask)
+#    print "set group address Untrust GroupAddressName%s add AddressName%s" % (countgroup, address)
+    print "unset route %s %s gateway 1.2.3.4" % (address, mask)
