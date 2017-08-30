@@ -2,6 +2,7 @@
 #
 # created by Jerhone
 # email: jerhone.valledor@gmail.com
+# www.ultimatetut.com
 
 import pexpect
 
@@ -10,7 +11,7 @@ import pexpect
 sw_ip = '192.168.10.253'
 sw_pass = 'password'
 
-# Spawn Telnet 
+# Spawn Telnet
 radius_child = pexpect.spawn('telnet ' + sw_ip)
 # Send a key to prompt password
 radius_child.send('\x1b[A')
